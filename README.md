@@ -115,3 +115,15 @@ The script calls this repeatedly for all channels in the user subscribed/entitle
 ```utils.py``` - This contains the logic for the m3u generation. This will be integrated soon in the main file
 
 API Doc can be found [here](static/apidoc.md)
+
+
+<h3>🤗 Original Credits : </h3>
+<h4>© 2021 [ Force GT ] (https://github.com/ForceGT/Tata-Sky-IPTV) </h4>
+
+
+---
+<h4 align='center'>© 2021 Techie Sneh</h4>
+
+<!-- DO NOT REMOVE THIS CREDIT 🤬 🤬 -->
+
+
