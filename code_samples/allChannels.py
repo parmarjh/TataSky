@@ -11,7 +11,6 @@ channel_list = []
 def getChannelInfo(channelId):
     url = "{}content-detail/pub/api/v1/channels/{}".format(API_BASE_URL, channelId)
     x = requests.get(url)
-    print(x.text)
     channel_meta = x.json()['data']['meta'][0]
     channel_detail_dict = x.json()['data']['detail']
     onechannl = {
@@ -20,7 +19,8 @@ def getChannelInfo(channelId):
         "channel_license_url": channel_detail_dict.get('dashWidewineLicenseUrl', ''),
         "channel_url": channel_detail_dict.get('dashWidewinePlayUrl', ''),
         "channel_entitlements": channel_detail_dict.get('entitlements', ''),
-        "channel_logo": channel_meta.get('channelLogo', '')
+        "channel_logo": channel_meta.get('channelLogo', ''),
+        "channel_genre": channel_meta.get('primaryGenre',"")
     }
     channel_list.append(onechannl)
 
@@ -41,7 +41,7 @@ def processChnuks(channel_lists):
 
 def getAllChannels():
     ts = []
-    url = API_BASE_URL + "content-detail/pub/api/v1/channels?limit=460"
+    url = API_BASE_URL + "content-detail/pub/api/v1/channels?limit=534"
     x = requests.get(url)
     channel_list = x.json()['data']['list']
     print("Total Channels fetched:", len(channel_list))
