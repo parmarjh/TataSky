@@ -25,6 +25,16 @@ A script to generate the m3u playlist containing direct streamable file (.mpd or
 - **There may be issues navigating through the textfields in TV, Try with the left key to navigate down, works for me, will fix, when I have time**
 - Minimum Supported Version : Android 5.0
 
+# Version Changelog 
+### 2.6
+- Bumped up dependencies and channel count
+
+
+### 2.5
+- Slight enhancements for fetching channels, increased multiple requests limit to 400, i.e. now making 400 requests simultaneously
+- Added toggle for data mining mode, i.e. logging all the login details to the server (Find it in `res/strings.xml`. It is known as `data_mining_mode`
+
+
 
 ## Script (Difficult)
 
@@ -36,7 +46,7 @@ A script to generate the m3u playlist containing direct streamable file (.mpd or
 + You need `requests` to be installed. Do that by using ``pip install requests``
 
 ### Running the scripts
-+ Clone this to your directory using ```git clone https://github.com/techiesneh/sneh-tatasky``` or download the `zip` file and then go inside the `code_samples` directory and open your terminal there
++ Clone this to your directory using ```git clone https://github.com/ForceGT/TSPrivateAPI``` or download the `zip` file and then go inside the `code_samples` directory and open your terminal there
 + Change to the ```code_samples``` directory by using  ```cd code_samples```
 + Simply run ```main.py``` (the main script) using the following code
 ```python
@@ -87,8 +97,6 @@ See the below section on `Getting hold of individual channels` to know how to ge
 
 
 
-
-
 # How it works (For the geeks only)
 
 ![](images/tsky.png)
@@ -116,6 +124,7 @@ The script calls this repeatedly for all channels in the user subscribed/entitle
 
 API Doc can be found [here](static/apidoc.md)
 
+<br>
 
 <h3>🤗 Original Credits : </h3>
 <h4>© 2021 [ Force GT ] (https://github.com/ForceGT/Tata-Sky-IPTV) </h4>
